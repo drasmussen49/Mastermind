@@ -3,12 +3,16 @@ using Xunit;
 
 namespace Mastermind.Tests
 {
-    public class UnitTest1
+    public class GameTests
     {
         [Fact]
         public void Test1()
         {
+            //arrange
 
+            //act
+
+            //assert
         }
     }
 }
