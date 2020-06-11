@@ -9,11 +9,11 @@ namespace Mastermind
         public int[] masterArray = new int[4];
 
         public int[] MasterArray { get; set; }
-        public int GuessCounter { get; set; }
 
         public Game()
         {
             MasterArray = masterArray;
+            SetMasterArray();
         }
 
         public void SetMasterArray()

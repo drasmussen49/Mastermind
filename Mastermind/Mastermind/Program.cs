@@ -6,7 +6,7 @@ namespace Mastermind
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Game freshGame = new Game();
         }
     }
 }
