@@ -7,6 +7,8 @@ namespace Mastermind
         static void Main()
         {
             Game freshGame = new Game();
+            Player player = new Player();
+            player.PlayerGuess();
         }
     }
 }

@@ -17,12 +17,30 @@ namespace Mastermind
             GuessCounter = 0;
         }
 
-        //public int[] PlayerGuess()
-        //{
-        //    Console.WriteLine("\nType a number 1 through 6");
-        //    string playerInput = Console.ReadLine();
-        //    InputChecker(playerInput);
-        //}
+        public void PlayerGuess()
+        {
+            for (int i=0; i<4; i++)
+            {
+                bool hasGuessed = false;
+                while (hasGuessed == false)
+                {
+                    Console.WriteLine("\nInput a number 1 through 6");
+                    string playerInput = Console.ReadLine();
+                    if (InputChecker(playerInput) == true)
+                    {
+                        int playerInputAsInt = int.Parse(playerInput);
+                        playerArray[i] = playerInputAsInt;
+                        hasGuessed = true;
+                    }
+                    else if (InputChecker(playerInput) == false)
+                    {
+                        Console.WriteLine("You did not input a a valid number. Numbers 1 though 6 are accepted.");
+                    }
+                }
+            }
+            string playerArrayDisplay = string.Join(",", playerArray).Replace(",", string.Empty);
+            Console.WriteLine("Your guess is: " + playerArrayDisplay);
+        }
 
         public bool InputChecker(string input)
         {
