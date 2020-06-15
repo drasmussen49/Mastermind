@@ -16,5 +16,26 @@ namespace Mastermind
             PlayerArray = playerArray;
             GuessCounter = 0;
         }
+
+        //public int[] PlayerGuess()
+        //{
+        //    Console.WriteLine("\nType a number 1 through 6");
+        //    string playerInput = Console.ReadLine();
+        //    InputChecker(playerInput);
+        //}
+
+        public bool InputChecker(string input)
+        {
+            int convertedNum;
+            bool isNum = int.TryParse(input, out convertedNum);
+            if (isNum == true && convertedNum > 0 && convertedNum < 7)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
