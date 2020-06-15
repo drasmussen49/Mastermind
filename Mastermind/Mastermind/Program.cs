@@ -8,7 +8,7 @@ namespace Mastermind
         {
             Game freshGame = new Game();
             Player player = new Player();
-            player.PlayerGuess();
+            player.PlayerGuess(freshGame);
         }
     }
 }
