@@ -58,7 +58,7 @@ namespace Mastermind
             }
             else
             {
-                Console.WriteLine("You did not guess correctly in 10 tries. Please play again!");
+                Console.WriteLine("You did not guess correctly in 10 tries. You lost.");
             }
         }
 
