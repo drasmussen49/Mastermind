@@ -16,7 +16,7 @@ namespace Mastermind.Tests
         }
 
         [Fact]
-        public void InputCheckerReturnsTrueWhenGivenNotAnInteger()
+        public void InputCheckerReturnsTrueWhenGivenAnInteger()
         {
             Player player = new Player();
 

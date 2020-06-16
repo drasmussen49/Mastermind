@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Mastermind
@@ -14,13 +15,15 @@ namespace Mastermind
         public Player()
         {
             PlayerArray = playerArray;
-            GuessCounter = 0;
+            GuessCounter = 1;
         }
 
         public void PlayerGuess(Game game)
         {
-            while (GuessCounter < 10)
+            while (GuessCounter < 11)
             {
+                Console.WriteLine("\n--------------------------------------------------------------------------------");
+                Console.WriteLine($"\nGuess number {GuessCounter}.");
                 for (int i=0; i<4; i++)
                 {
                     bool hasGuessed = false;
@@ -41,9 +44,15 @@ namespace Mastermind
                     }
                 }   
                 string playerArrayDisplay = string.Join(",", playerArray).Replace(",", string.Empty);
-                Console.WriteLine("\nYour guess is: " + playerArrayDisplay);
+                Console.WriteLine("\nYour guess is: " +"[" + playerArrayDisplay + "]");
                 GuessCounter++;
+                game.MasterArrayCompare(playerArray);
+                if (playerArray.SequenceEqual(game.MasterArray))
+                {
+                    break;
+                }
             }
+            Console.WriteLine("\nPlease play again!");
         }
 
         public bool InputChecker(string input)
