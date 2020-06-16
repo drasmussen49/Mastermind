@@ -66,7 +66,7 @@ namespace Mastermind
             Console.WriteLine("\nResponse:      " + "[" + responseArrayDisplay + "]");
             if (responseArray.SequenceEqual(correctGuessArray))
             {
-                Console.WriteLine("Congratulations, you got the correct answer!");
+                Console.WriteLine("Congratulations, you got the correct answer!"); 
             }
         }
     }

@@ -52,7 +52,14 @@ namespace Mastermind
                     break;
                 }
             }
-            Console.WriteLine("\nPlease play again!");
+            if (playerArray.SequenceEqual(game.MasterArray))
+            {
+                Console.WriteLine("\nPlease play again!");
+            }
+            else
+            {
+                Console.WriteLine("You did not guess correctly in 10 tries. Please play again!");
+            }
         }
 
         public bool InputChecker(string input)
